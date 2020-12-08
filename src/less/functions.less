@@ -1,0 +1,119 @@
+//require to vars.less
+
+.font-smoothing(@type:antialiased){ //none|subpixel-antialiased|antialiased
+	-webkit-font-smoothing: @type;
+			font-smoothing: @type;
+}
+.circle(@diameter, @border-width: 0){
+	display: inline-block;
+	.size(@diameter, @diameter);
+	border-radius: unit(ceil((@diameter + @border-width * 2) / 2), px);
+}
+.gradient(@from, @to){
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from( @from ), to( @to ));
+}
+.gradient-x(@from, @to){
+	background-image: -webkit-gradient(linear, 0 0, right 0, from( @from ), to( @to ));
+}
+.gradient-r(@from, @to, @radius){
+	background-image: -webkit-gradient(radial, center center, 0, center center, @radius, from( @from ), to( @to ));
+}
+.nowrap(){
+	white-space:nowrap;
+}
+.wrap(){
+  text-wrap: wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.no-text(){
+	text-indent:-9999px;
+	direction: ltr;
+}
+.min-size(@w,@h){
+	min-width: unit(@w, px);
+	min-height: unit(@h, px);
+}
+.max-size(@w,@h){
+	max-width: unit(@w, px);
+	max-height: unit(@h, px);
+}
+.font(@size; @line-height){
+	font-size: unit(@size, px);
+	line-height: unit(@line-height, px);
+}
+.font(@size; @line-height; @weight){
+	font-size: unit(@size, px);
+	line-height: unit(@line-height, px);
+	font-weight: @weight;
+}
+.font_rem(@size; @line-height; @weight){
+	.px2rem(unit(@size, px));
+	.px2rem(unit(@line-height, px), line-height);
+	font-weight: @weight;
+}
+.rel-obj(){
+	position:relative;
+}
+.abs-obj(@p:tl) when (@p = tl){
+	position:absolute;
+	top:0;
+	left:0;
+}
+.abs-obj(@p:tl) when (@p = rb){
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+.float-obj(@float:left){
+	display:inline-block;
+	float:@float;
+}
+.border(@color; @weight: 1px; @style: solid){
+	border: @weight @style @color;
+}
+.size(@w, @h){
+	width: unit(@w, px);
+	height: unit(@h, px);
+}
+.size_rem(@w, @h){
+	.px2rem(unit(@w, px), width);
+	.px2rem(unit(@h, px), height);
+}
+.square(@diameter){
+	.size(@diameter, @diameter);
+}
+.square_rem(@diameter) {
+	.size_rem(@diameter, @diameter);
+}
+.circle(@diameter, @border-width: 0){
+	display: inline-block;
+	.size(@diameter, @diameter);
+	border-radius: 50%;
+}
+.circle_rem(@diameter, @border-width: 0){
+	display: inline-block;
+	.size_rem(@diameter, @diameter);
+	.px2rem(unit(ceil((@diameter + @border-width * 2) / 2), px), border-radius);
+}
+.bg-posi(@x, @y){
+	background-position:unit(@x, px) unit(@y, px);
+}
+.bg-size(@w, @h:0) when ( isnumber(@w) ){
+	-webkit-background-size:unit(@w, px) unit(@h, px);
+	background-size:unit(@w, px) unit(@h, px);
+}
+.bg-size(@arg: contain){ //contain|cover
+	-webkit-background-size: @arg;
+	background-size: @arg;
+}
+.bg-size_rem(@w, @h) {
+	.px2rem_2(unit(@w, px), unit(@h, px), background-size);
+}
+.clearProp(@property){
+	@{property}: initial;
+}
+.arial(){
+	font-family: Arial, sans-serif;
+}

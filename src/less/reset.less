@@ -1,0 +1,92 @@
+/*********************************** reset ***********************************/
+body,article,section,h1,h2,h3,h4,h5,h6,hgroup,textarea,p,progress,a,ul,ol,li,dl,dd,dt,em,div,small,span,footer,menu,canvas,select,option,figure,figcaption,time,input,fieldset,legend{
+	margin:0;
+	padding:0;
+}
+html {
+  height: 100%;
+}
+body {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	.font-normal;
+	font-family: @font-family;
+	min-height: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	>div {
+		flex: 1;
+		display: flex;
+
+		&:nth-child(n+2) {
+			flex: 0;
+		}
+	}
+}
+img,fieldset{
+	border:none;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+
+	&:focus,
+	&:active,
+	&:hover {
+		color: @color-link;
+		opacity: .8;
+		text-decoration: underline;
+	}
+}
+ul,ol{
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+}
+i,em{
+	font-style:normal;
+}
+figure[hidden]{
+	display:none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+	outline:0 none;
+	-webkit-user-modify: read-write-plaintext-only; //低版本安卓用js设为initial
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+progress{
+	-webkit-appearance: none; //progress-bar
+
+	&::-webkit-progress-bar,
+	&::-webkit-progress-value{
+		background-color: transparent;
+	}
+}
+button,
+input[type=reset],
+input[type=text],
+input[type=search],
+input[type=password],
+input[type=number],
+input[type=url],
+input[type=submit],
+input[type=tel],
+input[type=email],
+input[type=checkbox],
+input[type=radio],
+input[type=button],
+textarea,
+.input-clear{
+	.font-normal;
+	color: #8a8989;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	width:100%;
+}

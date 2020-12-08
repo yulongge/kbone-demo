@@ -1,0 +1,51 @@
+:global {
+    .perfect-guide {
+    
+        .mask {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            opacity: .78;
+            z-index: 11;
+        }
+        .guide-box {
+            position: fixed;
+            z-index: 22;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            margin-top: 78px;
+            img {
+                width: 286px;
+                height: 347px;
+                background-image: url(../../images/mask-perfect-pic.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                display: block;
+            }
+            .close-box {
+                width: 30px;
+                margin: 0 auto;
+                span {
+                    width: 4px;
+                    height: 71px;
+                    background-color: #D8D8D8;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .close-switch {
+                    width: 30px;
+                    height: 30px;
+                    background-image: url(../../images/close.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}

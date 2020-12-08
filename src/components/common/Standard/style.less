@@ -1,0 +1,140 @@
+.standard {
+	:global {
+		.shade {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: #000;
+			opacity: .78;
+			z-index: 11;
+		}
+		.content {
+			position: fixed;
+			z-index: 22;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			min-height: 200px;
+			background-color: #fff;
+			padding-bottom: 60px;
+			box-sizing: border-box;
+			.confirm {
+				display: block;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				color: #ffffff;
+				font-size: 16px;
+				text-align: center;
+				background-image: linear-gradient(-269deg, #FD4B3B 0%, #FD6D42 100%);
+			}
+			
+			.msg {
+				display: flex;
+				height: 100px;
+				align-items: flex-end;
+				img {
+					width: 100px;
+					height: 100px;
+				}
+				.price {
+					flex: 1;
+				}
+				.price {
+					padding: 0px 16px 10px 16px;
+					font-family: DINAlternate-Bold;
+					.vip_price {
+						position: relative;
+						display: flex;
+						.number {
+							font-size: 20px;
+							color: #FD4B3B;
+							label {
+								font-family:PingFangSC-Medium;
+								font-size:14px;
+								color:#fd4b3b;
+								margin-left: 2px;
+							}
+						}
+						.member {
+							border: 1px solid #FD4B3B;
+							border-radius: 50px;
+							color: #FD4B3B;
+							font-size: 10px;
+							padding: 2px 5px;
+						}
+						.onhand, .sales {
+							font-family: PingFangSC-Regular;
+							right: 0;
+							bottom: 0px;
+							font-size:13px;
+							color:#aaaaaa;
+						}
+					}
+					.common_price {
+						font-size: 11px;
+						color: #D1D0D0;
+						margin-top: 5px;
+						.number {
+							text-decoration:line-through;
+						}
+					}
+					.originalPrice {
+						text-decoration:line-through;
+						color: #D1D0D0;
+					}
+				}
+			}
+			.standard {
+				padding: 16px;
+				border-top: 1px solid #F2F2F2;
+				border-bottom: 1px solid #F2F2F2;
+				.standard_itle {
+					font-size: 14px;
+					color: #797878;
+				}
+				.category {
+					margin-top: 10px;
+					span {
+						background: #F6F6F6;
+						border-radius: 5px;
+						padding: 2px 5px;
+						font-size: 12px;
+						color: #2B2B2B;
+						display: inline-block;
+						margin-right: 10px;
+						margin-top: 10px;
+					}
+					.active {
+						background: #FFF4F1;
+						color: #FD4B3B;
+						border: 1px solid #FD4B3B;
+					}
+				}
+			}
+			.buyCount {
+				padding: 16px;
+				position: relative;
+				.standard_itle {
+					font-size: 14px;
+					color: #797878;
+				}
+				.store {
+					display: block;
+					font-size: 13px;
+					color: #AAAAAA;
+				}
+				.numberstepper {
+					position: absolute;
+					right: 10px;
+					top: 15px;
+				}
+			}
+		}
+
+	}
+}

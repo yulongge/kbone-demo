@@ -1,0 +1,88 @@
+.market {
+	position: relative;
+	cursor: pointer;
+	// width: 354px;
+	// height: 131px;
+	:global {
+		.init_market {
+			//border-bottom: 1px dashed #DFE0E0;
+		}	
+
+		.market_con {
+			position: relative;
+			//border-bottom: 1px dashed #DFE0E0;
+		}
+
+		.active {
+			border: 1px dashed #0099FF;
+			box-sizing: border-box;
+		}
+
+		.market_item {
+			position: relative;
+			width: 354px;
+			//height: 131px;
+			margin: auto;
+			background: #fff;
+			box-shadow: 2px 6px 18px -8px rgba(0,0,0,0.50);
+			//border-radius: 7.46px;
+			//margin-top: 13px;
+			margin-bottom: 13px;
+			box-sizing: border-box;
+			.item_panel {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				img {
+					width: 100%;
+				}
+			}
+			.market_label {
+				position: absolute;
+				top: 0px;
+				left: 24px;
+				//background-image:linear-gradient(-90deg, #fd4242 0%, #fd3b8b 100%);
+				border-radius:0 0 10px 10px;
+				width:80px;
+				height:25px;
+				text-align: center;
+				line-height: 25px;
+				background-color: #fd3b8b;
+				color: #ffffff;
+			}
+			.spike_label {
+				background-color: #FD4B3B;
+				color: #ffffff;
+			}
+			.countdown {
+				position: absolute;
+				top: 4px;
+				right: 24px;
+			}
+			.item_nomsg {
+				position: relative;
+				border: 1px solid #EDEEF0;
+				border-radius: 7.46px;
+				box-sizing: border-box;
+				top: 30%;
+				text-align: center;
+				//margin-top: -19px;
+				.nomsg_icon {
+					position: relative;
+					display: block;
+					//background-image: url('../../../images/market_nomsg.png');
+					width: 38px;
+					height: 38px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					margin: auto;
+				}
+				p {
+					font-size: 12px;
+					color: #787878;
+				}
+			}
+		}
+	}
+}

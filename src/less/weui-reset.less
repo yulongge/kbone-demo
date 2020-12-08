@@ -1,0 +1,33 @@
+:global {
+    .weui-btn {
+        .px2rem(92/2, border-radius);
+        // background-color: #f8f8f8;
+        // color: #999;
+        border: none;
+        
+    }
+   .weui-btn_plain-primary {
+     //background-color: #f8f8f8 !important;
+         color: #1aad19;
+         border: 1px solid #1aad19;
+    }
+    .weui-btn_primary,
+    .weui-btn_primary:not(.weui-btn_disabled):active {
+        //background-color: #fff;
+        &.weui-btn_disabled {
+           // background-color: #bf9d5e;
+            opacity: .5;
+        }
+    }
+    .weui-cell__ft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .weui-icon_msg {
+        &.weui-icon-warn,
+        &.weui-icon-success {
+            //color: #bf9d5e
+        }
+    }
+}

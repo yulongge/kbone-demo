@@ -1,0 +1,135 @@
+.recommend {
+    padding-bottom: 20px;
+    :global {
+        .active {
+            border: 1px dashed #0099FF;
+            box-sizing: content-box;
+        }
+
+        .title {
+            padding-top: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            >span{
+                text-align: center;
+                font-size: 18px;
+                position: relative;
+                height: 40px;
+                line-height: 40px;
+    
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 1px;
+                    border-top: 1px solid #C7C7C9;
+                    top: 20px;
+                }
+                &::before {
+                    left: -60px;
+                }
+                &::after {
+                    right: -60px;
+                }
+            }
+        }
+        .products {
+            position: relative;
+            width: 354px;
+            min-height: 250px;
+            margin: auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .goods_box {
+                width: 170px;
+                height: auto;
+                margin-top: 12px;
+                background-color: #ffffff;
+                border-radius: 5px;
+                .good_img {
+                    width: 170px;
+                    height: 170px;
+                    object-fit: cover;
+                    background-color: #EDEEF0;
+                    text-align: center;
+                    //margin-bottom: 6px;
+                    // border-top-left-radius: 5px;
+                    // border-top-right-radius: 5px;
+                    .nomsg_icon {
+                        display: block;
+                        margin-top: 55px;
+                        //background-image: url('../../../images/market_nomsg.png');
+                        width: 38px;
+                        height: 38px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin: auto;
+                        position: relative;
+                        top: 37%;
+                    }
+                    .nomsg_text {
+                        font-size: 12px;
+                        color: #787878;
+                        position: relative;
+                        top: 37%;
+                    }
+                }
+                .good_title {
+                    margin-top: 6px;
+                    padding: 0 8px;
+                    color: #2B2B2B;
+                    font-size: 15px;
+                    line-height: 22px;
+                    margin-bottom: 12px;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
+    
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    /*! autoprefixer: off */
+                    -webkit-box-orient: vertical;
+                    /*! autoprefixer: on */
+                    height: 40px;
+                }
+                .good_detail {
+                    display: flex;
+                    padding: 0 8px;
+                    align-items: baseline;
+                    margin-bottom: 5px;
+                    .good_price {
+                        color: #FF3A17;
+                        margin-right: 3px;
+                        .symbol {
+                            font-size: 10px;
+                        }
+                        .price {
+                            font-size: 16px;
+                            font-family: DIN Alternate;
+                            i {
+                                //font-size: 10px;
+                            }
+                            label {
+                                font-size: 10px;
+                                margin-left: 2px;
+                            }
+                        }
+                    }
+                    .purchased {
+                        color: #999999;
+                        font-size: 13px;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}

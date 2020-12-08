@@ -1,0 +1,183 @@
+.goodshelves {
+	position: relative;
+	cursor: pointer;
+	// width: 354px;
+	// height: 131px;
+	
+    
+}
+:global {
+	.init_goodshelves {
+		min-height: 290px;
+		//border-bottom: 1px dashed #DFE0E0;
+		position: relative;
+	}	
+
+	.goodshelves_con {
+		position: relative;
+		border-bottom: 1px dashed #DFE0E0;
+	}
+	
+	.shelves_title {
+		width: 120px;
+		height: 28px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 0 0;
+		.line {
+			width: 25px;
+			height: 1px;
+			background-color: #797878;
+		}
+		.shelves_name {
+			width: 52px;
+			line-height: 20px;
+			color: #797878;
+			font-size: 13px;
+			text-align: center;
+		}
+	}
+	.msg {
+		padding: 10px 16px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			//flex: 1;
+			font-size: 13px;
+			color: #AAAAAA;
+		}
+	}
+	.init_goods {
+		position: relative;
+		width: 354px;
+		min-height: 250px;
+		margin: auto;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.goods_box {
+			width: 170px;
+			height: auto;
+			margin-top: 12px;
+			background-color: #ffffff;
+			border-radius: 5px;
+			.good_img {
+				width: 170px;
+				height: 170px;
+				object-fit: cover;
+				background-color: #EDEEF0;
+				text-align: center;
+				//margin-bottom: 6px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				.nomsg_icon {
+					display: block;
+					margin-top: 55px;
+					//background-image: url('../../../images/market_nomsg.png');
+					width: 38px;
+					height: 38px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					margin: auto;
+					position: relative;
+					top: 37%;
+				}
+				.nomsg_text {
+					font-size: 12px;
+					color: #787878;
+					position: relative;
+					top: 37%;
+				}
+			}
+			.good_title {
+				// margin-top: 6px;
+				padding: 6px 8px 4px;
+				padding-bottom: 0;
+				color: #2B2B2B;
+				font-size: 15px;
+				line-height: 24px;
+				// margin-bottom: 12px;
+				// overflow: hidden;
+				// white-space: nowrap;
+				// text-overflow: ellipsis;
+
+				text-overflow: -o-ellipsis-lastline;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				line-clamp: 2;
+				/*! autoprefixer: off */
+				-webkit-box-orient: vertical;
+				/*! autoprefixer: on */
+				// height: 40px;
+			}
+			.good_subtitle {
+				padding: 0 8px;
+				padding-bottom: 10px;
+				line-height: 20px;
+				font-size: 13px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.good_detail {
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 8px;
+				margin-bottom: 10px;
+				position: relative;
+				.good_price {
+					color: #FF3A17;
+					margin-right: 3px;
+					.symbol {
+						font-size: 10px;
+					}
+					.price {
+						font-size: 16px;
+						font-family: DIN Alternate;
+						i {
+							//font-size: 10px;
+						}
+						label {
+							font-size: 10px;
+							margin-left: 2px;
+						}
+					}
+				}
+				.purchased {
+					color: #999999;
+					font-size: 13px;
+				}
+
+				.add-cart {
+					position: absolute;
+					width: 40px;
+					height: 40px;
+					bottom: -10px;
+					right: 0;
+					z-index: 2;
+					background: url('../../images/icon_cart.png') no-repeat center;
+					background-size: 50%;
+				}
+			}
+			
+		}
+		
+	}
+	.no_shelves_tip {
+		font-size: 12px;
+		color: #A8A8B7;
+		line-height: 18px;
+		text-align: center;
+		margin: 6px 0 25px;
+	}
+
+	.market_item_nomsg {
+		height: 131px;
+	}
+}
